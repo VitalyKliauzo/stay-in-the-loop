@@ -17,6 +17,8 @@ email notifications without a risk to spam anyone
   > `yarn mailhog-start`
 * to send an email via mailhog and check it in web client run  
   > `yarn test`
+* to fetch messages in JSON format run  
+  > `yarn test-api`
 * to stop mailhog docker container run  
   > `yarn mailhog-stop`
 

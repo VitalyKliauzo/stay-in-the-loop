@@ -6,7 +6,8 @@
   "scripts": {
     "mailhog-start": "docker run --detach --name=mailhog --publish=127.0.0.1:8025:8025 --publish=127.0.0.1:1025:1025 --restart=unless-stopped mailhog/mailhog",
     "mailhog-stop": "docker stop mailhog && docker rm mailhog",
-    "test": "node -r dotenv/config test.js dotenv_config_path=.env && open http://localhost:8025"
+    "test": "node -r dotenv/config test.js dotenv_config_path=.env && open http://localhost:8025",
+    "test-api": "open http://localhost:8025/api/v2/messages"
   },
   "author": "",
   "license": "ISC",
