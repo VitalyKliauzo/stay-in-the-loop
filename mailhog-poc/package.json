@@ -1,0 +1,19 @@
+{
+  "name": "mailhog-poc",
+  "version": "1.0.0",
+  "description": "Here is a sample how easily you can use mailhog/mailhog docker container to test email notifications without a risk to spam anyone",
+  "main": "index.js",
+  "scripts": {
+    "mailhog-start": "docker run --detach --name=mailhog --publish=127.0.0.1:8025:8025 --publish=127.0.0.1:1025:1025 --restart=unless-stopped mailhog/mailhog",
+    "mailhog-stop": "docker stop mailhog && docker rm mailhog",
+    "test": "node -r dotenv/config test.js dotenv_config_path=.env && open http://localhost:8025"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.4.17"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
